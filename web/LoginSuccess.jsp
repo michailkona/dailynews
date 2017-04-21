@@ -18,6 +18,7 @@
             Author: BootstrapMade.com
             Author URL: https://bootstrapmade.com
         ======================================================= -->
+
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
         <!--banner-->
@@ -59,9 +60,7 @@
                                 <br>
                                 <a href="#contact" class="btn btn-appoint">Επικοινωνία</a>
                             </div>
-                            <div class="overlay-detail text-center">
-                                <a href="#service"><i class="fa fa-angle-down"></i></a>
-                            </div>		
+
                         </div>
                     </div>
                 </div>
@@ -129,52 +128,58 @@
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-6">
                         <div class="thumbnail"> 
-                            <img src="img/category Greece.jpg" alt="Ελλάδα" class="team-img" style="height: 180px;">
-                            <div class="caption">
-                                <h3>Ελλάδα</h3>
-                            </div>
+                            <a href="CategoryGreeceServlet?author_id=${author_id}" style="text-decoration: none;">
+                                <img src="img/category Greece.jpg" alt="Ελλάδα" class="team-img" style="height: 180px;">
+                                <div class="caption">
+                                    <h3>Ελλάδα</h3>
+                                </div></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-6">
                         <div class="thumbnail"> 
-                            <img src="img/images.jpg" alt="Κόσμος" class="team-img" style="height: 180px;">
-                            <div class="caption">
-                                <h3>Κόσμος</h3>
-                            </div>
+                            <a href="CategoryWorldServlet?author_id=${author_id}" style="text-decoration: none;">
+
+                                <img src="img/images.jpg" alt="Κόσμος" class="team-img" style="height: 180px;">
+                                <div class="caption">
+                                    <h3>Κόσμος</h3>
+                                </div></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-6">
                         <div class="thumbnail"> 
+                            <a href="CategoryPoliticsServlet?author_id=${author_id}" style="text-decoration: none;">
                             <img src="img/category politiki.jpg" alt="Πολιτική" class="team-img" style="height: 180px;">
                             <div class="caption">
                                 <h3>Πολιτική</h3>
-                            </div>
+                            </div></a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="thumbnail"> 
+                            <a href="CategoryEconomyServlet?author_id=${author_id}" style="text-decoration: none;">
                             <img src="img/images1.jpg" alt="Οικονομία" class="team-img" style="height: 180px;">
                             <div class="caption">
                                 <h3>Οικονομία</h3>
-                            </div>
+                            </div></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <div class="thumbnail"> 
+                            <a href="CategoryAthleticsServlet?author_id=${author_id}" style="text-decoration: none;">
                             <img src="img/category athlitika.jpg" alt="Αθλητικά" class="team-img" style="height: 180px;">
                             <div class="caption">
                                 <h3>Αθλητικά</h3>
-                            </div>
+                            </div></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--/ category-->
-        
+
         <!--contact-->
         <section id="contact" class="section-padding">
             <div class="container">
@@ -193,10 +198,24 @@
                         <div class="space"></div>
                         <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>(+30)210 2345678</p>
                     </div>
-                    <div class="col-md-8 col-sm-8 marb20">
-                        <div class="contact-info">
-                            <h3 class="cnt-ttl">Χαρτης</h3>
-                        </div>
+                    <div class="col-md-8 col-md-8 col-md-8">
+                        <div id="map"></div>
+                        <script>
+                            function initMap() {
+                                var uluru = {lat: 37.9889336, lng: 23.7475868};
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                    zoom: 15,
+                                    center: uluru
+                                });
+                                var marker = new google.maps.Marker({
+                                    position: uluru,
+                                    map: map
+                                });
+                            }
+                        </script>
+                        <script async defer
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw-a1t7PRyYiYw0gbV77NN40t-OvnvbFs&callback=initMap">
+                        </script>
                     </div>
                 </div>
             </div>
@@ -234,10 +253,10 @@
                             </div>
                             <div class="info-sec">
                                 <ul class="social-icon">
-                                    
+
                                     <li class="bgred"><a href="https://plus.google.com/u/0/109842541257334198001" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                                     <li class="bgdark-blue"><a href="https://www.linkedin.com/in/konstantina-michail/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -256,7 +275,7 @@
                                     Licensing information: https://bootstrapmade.com/license/
                                     Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
                                 -->
-                               
+
                             </div>
                         </div>
                     </div>
@@ -264,12 +283,13 @@
             </div>
         </footer>
         <!--/ footer-->
-<!--/ footer-->
+        <!--/ footer-->
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/custom.js"></script>
-        <script src="contactform/contactform.js"></script>
+        <script src="js/jquery.ui.map.min.js"></script>
+
 
     </body>
 </html>

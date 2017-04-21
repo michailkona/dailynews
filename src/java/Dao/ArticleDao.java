@@ -59,7 +59,7 @@ public class ArticleDao {
             try {
                 con.close();
             } catch (SQLException ex) {
-                Logger.getLogger(AuthorDao.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ArticleDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return result;
@@ -122,7 +122,7 @@ public class ArticleDao {
             try {
                 con.close();
             } catch (SQLException ex) {
-                Logger.getLogger(AuthorDao.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ArticleDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return result;

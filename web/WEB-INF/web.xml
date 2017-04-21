@@ -24,6 +24,26 @@
         <servlet-name>ArticleUpdateServlet</servlet-name>
         <servlet-class>ArticleServlet.ArticleUpdateServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CategoryGreeceServlet</servlet-name>
+        <servlet-class>Category.CategoryGreeceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CategoryWorldServlet</servlet-name>
+        <servlet-class>Category.CategoryWorldServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CategoryPoliticsServlet</servlet-name>
+        <servlet-class>Category.CategoryPoliticsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CategoryEconomyServlet</servlet-name>
+        <servlet-class>Category.CategoryEconomyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CategoryAthleticsServlet</servlet-name>
+        <servlet-class>Category.CategoryAthleticsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -47,6 +67,26 @@
     <servlet-mapping>
         <servlet-name>ArticleUpdateServlet</servlet-name>
         <url-pattern>/ArticleUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryGreeceServlet</servlet-name>
+        <url-pattern>/CategoryGreeceServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryWorldServlet</servlet-name>
+        <url-pattern>/CategoryWorldServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryPoliticsServlet</servlet-name>
+        <url-pattern>/CategoryPoliticsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryEconomyServlet</servlet-name>
+        <url-pattern>/CategoryEconomyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryAthleticsServlet</servlet-name>
+        <url-pattern>/CategoryAthleticsServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

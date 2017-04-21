@@ -31,7 +31,18 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         
-        getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+        String author_id = request.getParameter("author_id");
+        
+        
+        if(author_id != null){
+            request.setAttribute("author_id", author_id);
+            getServletContext().getRequestDispatcher("/LoginSuccess.jsp").forward(request, response);
+        
+        }else{
+            getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+        
+        }
+        
     }
 
     @Override
